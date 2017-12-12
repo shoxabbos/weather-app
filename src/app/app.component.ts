@@ -4,6 +4,7 @@ import { BrowserTab } from '@ionic-native/browser-tab';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PageInterface, UtilService } from '../providers';
+import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,6 +32,7 @@ export class MosumApp {
               public utilService: UtilService,
               public statusBar: StatusBar,
               public splashScreen: SplashScreen,
+              public admobFree: AdMobFree,
               public browserTab: BrowserTab) {
     this.platformReady();
   }
@@ -47,6 +49,23 @@ export class MosumApp {
     this.statusBar.styleLightContent();
     this.statusBar.backgroundColorByHexString('#12121c');
     this.splashScreen.hide();
+
+
+    
+
+    const bannerConfig: AdMobFreeBannerConfig = {
+      // id: 'ca-app-pub-8477109833223606/5854508905',
+      isTesting: true,
+      autoShow: true
+    };
+    
+    this.admobFree.banner.config(bannerConfig);
+
+    this.admobFree.banner.prepare().then(() => {
+      alert("shoxabbos");
+    }).catch(e => console.log(e));
+
+
   }
 
   openPage(page: PageInterface) {

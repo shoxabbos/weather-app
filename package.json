@@ -29,13 +29,14 @@
     "@angular/http": "4.4.3",
     "@angular/platform-browser": "4.4.3",
     "@angular/platform-browser-dynamic": "4.4.3",
+    "@ionic-native/admob-free": "^4.5.2",
     "@ionic-native/browser-tab": "^4.3.2",
     "@ionic-native/core": "^4.3.2",
     "@ionic-native/keyboard": "^4.3.2",
     "@ionic-native/splash-screen": "^4.3.2",
     "@ionic-native/status-bar": "^4.3.2",
     "cordova-android": "6.3.0",
-    "cordova-ios": "4.5.2",
+    "cordova-plugin-admob-free": "^0.13.0",
     "cordova-plugin-browsertab": "^0.2.0",
     "cordova-plugin-device": "^1.1.6",
     "cordova-plugin-ionic-keyboard": "^2.0.4",
@@ -72,8 +73,7 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   }
 }

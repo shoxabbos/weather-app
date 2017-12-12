@@ -9,6 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { DatabaseService, ForecastService, Sql, UtilService } from '../providers';
 import { MosumApp } from './app.component';
+import { AdMobFree } from '@ionic-native/admob-free';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MosumApp } from './app.component';
     ForecastService,
     SplashScreen,
     StatusBar,
-    BrowserTab
+    BrowserTab,
+    AdMobFree,
   ]
 })
 export class AppModule {
