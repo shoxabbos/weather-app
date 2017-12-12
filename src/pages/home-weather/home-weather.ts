@@ -14,7 +14,10 @@ export class HomeWeatherPage {
   onDestroyEmitter: EventEmitter<string>;
   location: Location;
 
-  constructor(public databaseService: DatabaseService, public modalCtrl: ModalController) {
+  constructor(
+    public databaseService: DatabaseService, 
+    public modalCtrl: ModalController
+  ) {
     this.onInitEmitter = new EventEmitter<string>();
     this.onDestroyEmitter = new EventEmitter<string>();
   }

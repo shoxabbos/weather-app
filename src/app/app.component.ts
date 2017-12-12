@@ -31,8 +31,8 @@ export class MosumApp {
   constructor(public platform: Platform,
               public utilService: UtilService,
               public statusBar: StatusBar,
-              public splashScreen: SplashScreen,
               public admobFree: AdMobFree,
+              public splashScreen: SplashScreen,
               public browserTab: BrowserTab) {
     this.platformReady();
   }
@@ -50,21 +50,19 @@ export class MosumApp {
     this.statusBar.backgroundColorByHexString('#12121c');
     this.splashScreen.hide();
 
-
-    
-
     const bannerConfig: AdMobFreeBannerConfig = {
-      // id: 'ca-app-pub-8477109833223606/5854508905',
-      isTesting: true,
+      id: 'ca-app-pub-8477109833223606/5854508905',
+      isTesting: false,
       autoShow: true
     };
-    
+
     this.admobFree.banner.config(bannerConfig);
 
-    this.admobFree.banner.prepare().then(() => {
-      alert("shoxabbos");
-    }).catch(e => console.log(e));
-
+    this.admobFree.banner.prepare().then((result) => {
+      console.log(result);
+    }).catch((result) => {
+      console.log(result);
+    });
 
   }
 
