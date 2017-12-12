@@ -1,0 +1,57 @@
+<!--suppress ALL -->
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sozlamalar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="homeLocation">
+    <ion-list-header>Joylashuv</ion-list-header>
+    <button ion-item class="item-select" (click)="changeHomeLocation()">
+      <ion-label color="primary">Asosiy manzil</ion-label>
+      <ion-note item-right style="color:inherit">{{homeLocation.name}}</ion-note>
+    </button>
+  </ion-list>
+  <ion-list *ngIf="metrics">
+    <ion-list-header>Metrikalar</ion-list-header>
+    <ion-item>
+      <ion-label color="primary">Harorat</ion-label>
+      <ion-select [(ngModel)]="metrics.temp" (ionChange)="metricChange()">
+        <ion-option [value]="enumTemp.F">Fahrenheit bo'yicha</ion-option>
+        <ion-option [value]="enumTemp.C">Tselsiy bo'yicha</ion-option>
+      </ion-select>
+    </ion-item>
+    <!--<ion-item>-->
+    <!--<ion-label color="primary">Time</ion-label>-->
+    <!--<ion-select [(ngModel)]="metrics.time" (ionChange)="metricChange()">-->
+    <!--<ion-option [value]="12">12 Hour</ion-option>-->
+    <!--<ion-option [value]="24">24 Hour</ion-option>-->
+    <!--</ion-select>-->
+    <!--</ion-item>-->
+    <ion-item>
+      <ion-label color="primary">Uzunligi</ion-label>
+      <ion-select [(ngModel)]="metrics.length" (ionChange)="metricChange()">
+        <ion-option [value]="enumLength.IN">Inchda</ion-option>
+        <ion-option [value]="enumLength.CM">Santimetrda</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Masofa</ion-label>
+      <ion-select [(ngModel)]="metrics.distance" (ionChange)="metricChange()">
+        <ion-option [value]="enumDistance.MI">Milda</ion-option>
+        <ion-option [value]="enumDistance.KM">Kilometrda</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Bosim</ion-label>
+      <ion-select [(ngModel)]="metrics.pressure" (ionChange)="metricChange()">
+        <ion-option [value]="enumPressure.MBAR">mbar</ion-option>
+        <ion-option [value]="enumPressure.HPA">hPa</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
