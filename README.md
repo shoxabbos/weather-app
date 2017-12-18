@@ -1,24 +1,12 @@
-# ionic-mosum
-Ionic Weather App - The goal of this weather app is to demo different ionic component in a nice working app. Contributions are welcome for any good feature.
-- Website - https://aggarwalankush.github.io/ionic-mosum
-- iOS - https://itunes.apple.com/us/app/mosum/id1244641359?ls=1&mt=8
-- Android - https://play.google.com/store/apps/details?id=com.aggarwalankush.mosum
+# ionic-weather
+Ionic Weather App - Bu application shunchaki ionic komponentlari tezligini android tekshirish uchun qilingan.
+- Android - https://play.google.com/store/apps/details?id=uz.shoxabbos.weather
 
-## Prerequisites
-- Download nodejs from https://nodejs.org/en/download/current/ It will install `node` and `npm`
-```bash
-node -v
- - should be >= 6.0.0
-npm -v
- - should be >= 3.0.0
-```
-- For iOS, update XCode version to 8.0 or higher
+## Urnatish
 
-## Getting Started
+* Repozetoriyani klon qilib oling
 
-* Clone this repository
-
-* Install Ionic, cordova and node_modules
+* Ionic, cordova va node_modules larni urnatish uchun pasdagi komanda
 
     ```bash
     $ npm uninstall -g ionic cordova
@@ -26,22 +14,22 @@ npm -v
     $ npm install
     $ npm install --only=dev  
     ```
-* Get weather API key from [DarkSky](https://darksky.net)
-  * Replace API_KEY in `src/providers/constants.ts`
+* Ob havo API tokenini olib [DarkSky](https://darksky.net)
+  * API_KEY ni o'zgartiring `src/providers/constants.ts`
   ```js
   export const FORECAST_CONFIG = {
     API_ENDPOINT: 'https://api.darksky.net/forecast/',
     API_KEY: '9bb59ff3063ac4930fc96890570b0c6f'
   };
   ```
-* Get google API key from [Google Developers Console](https://console.developers.google.com/apis/credentials)
-  * Replace key in `src/index.html`
+* Google tokenini olish [Google Developers Console dan](https://console.developers.google.com/apis/credentials)
+  * va uzgartirish `src/index.html`
   ```html
   <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAZL0jdvdtBV_DmzLZ8yW53GHnhlRrbIAY&libraries=places">
   </script>
   ```
 
-## Run
+## Ishga tushirish
 
 #### Browser
 ```bash
@@ -68,42 +56,12 @@ npm -v
 ```    
     Run using XCode
     
-### icon resources
+### Ionic resurslarini generate qilish
 Run post_install script
 ```bash
     $ ./post_install.sh
 ```    
-    
-### Screenshots
-
-* Phone
-
-  <img src="screenshots/android-ios-phone.jpg" alt="android-ios-phone" width="500"/>
-  
-* Tablet
-  
-  <img src="screenshots/android-tablet.png" alt="android-tablet" width="350"/>
-  <img src="screenshots/ios-tablet.png" alt="ios-tablet" width="350"/>
-
-## Existing Features
-
-* Tabs, Side Menu with image
-* Various Animations
-* Infinite scroll
-* Google Maps API
-* SQL Database and WebSQL in browser
-* Weather caching to avoid redundant http requests
-* 3rd party libraries - lodash, moment, moment-timezone
-* Works in all timezones 
-
-## Contribution
-Contributions are welcome!
-
-See [features planned for future](https://github.com/aggarwalankush/ionic-mosum/issues/2) to get contributing ideas.
-
-* Report issues
-* Open pull request with improvements
-* Spread the word
+   
 
 ## License
 ionic-mosum is available under the MIT license. See the LICENSE file for more info.
